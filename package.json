@@ -1,0 +1,12 @@
+{
+	"name": "washazon",
+	"version": "1.0.0",
+	"description": "A commerce site",
+	"devDependencies": {
+		"turbo": "^1.12.3"
+	},
+	"scripts": {
+		"build": "turbo type-check build",
+		"dev": "turbo dev"
+	}
+}
