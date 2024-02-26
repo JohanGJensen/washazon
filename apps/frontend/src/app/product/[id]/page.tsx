@@ -2,7 +2,6 @@ import { getProductDetails } from "../../api/products/products";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import PageWrapper from "../../components/PageWrapper";
-import { DetailedProduct } from "../../../types/products";
 import DetailedOverview from "../components/DetailedOverview";
 
 interface DetailsPageProps {
@@ -11,7 +10,7 @@ interface DetailsPageProps {
 
 const Details: React.FC<DetailsPageProps> = async ({ params }) => {
   const productId = parseInt(params.id);
-  const product = (await getProductDetails(productId)) as DetailedProduct;
+  const product = await getProductDetails(productId);
 
   return (
     <PageWrapper>

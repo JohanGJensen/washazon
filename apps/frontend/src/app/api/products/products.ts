@@ -1,16 +1,36 @@
-// import { OverviewProduct } from "@/types/products";
 import env from "../../../constants/env";
+import { OverviewProduct, DetailedProduct } from "../../../types/products";
 import {
   getMockedProductOverview,
-  getMockedProductdetails
+  getMockedProductdetails,
 } from "./products.mock";
+
+type ProductOverviewResponse = Omit<Response, "json"> & {
+  json: () => Promise<OverviewProduct[]>;
+};
+
+type ProductDetailedResponse = Omit<Response, "json"> & {
+  json: () => Promise<DetailedProduct>;
+};
+
+const responseHandler = <R>(res: Response) => {
+  return res as R;
+};
 
 export const getProductOverview = async () => {
   if (env.MOCKED) {
-    return await getMockedProductOverview();
+    return getMockedProductOverview();
   }
 
-  return (await fetch(`${env.API_HOST}/product-overview`, { method: 'get' })).json();
+  const data = await fetch(`${env.API_HOST}/product-overview`, {
+    method: "get",
+  })
+    .then((res) => responseHandler<ProductOverviewResponse>(res))
+    .catch((err) => {
+      throw Error(err);
+    });
+
+  return data.json();
 };
 
 export const getProductDetails = async (productId: number) => {
@@ -18,5 +38,13 @@ export const getProductDetails = async (productId: number) => {
     return await getMockedProductdetails(productId);
   }
 
-  return (await fetch(`${env.API_HOST}/product-detail/${productId}`, { method: 'get' })).json();
+  const data = await fetch(`${env.API_HOST}/product-detail/${productId}`, {
+    method: "get",
+  })
+    .then((res) => responseHandler<ProductDetailedResponse>(res))
+    .catch((err) => {
+      throw Error(err);
+    });
+
+  return data.json();
 };

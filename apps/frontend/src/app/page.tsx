@@ -1,7 +1,6 @@
 import React from "react";
 
 import { getProductOverview } from "./api/products/products";
-import { OverviewProduct } from "../types/products";
 
 import ProductCard from "./components/ProductCard";
 import Header from "./components/Header";
@@ -9,7 +8,7 @@ import Footer from "./components/Footer";
 import PageWrapper from "./components/PageWrapper";
 
 export default async function Home() {
-  const products = await getProductOverview() as OverviewProduct[];
+  const products = await getProductOverview();
 
   return (
     <PageWrapper>
