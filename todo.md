@@ -7,6 +7,7 @@
  - [ ] Write basket component
  - [ ] Filter products
  - [ ] Internationalization (i18n)?
+ - [ ] graphql? - possibly different project
 
 ### Backend:
 - [ ] Add mysql
