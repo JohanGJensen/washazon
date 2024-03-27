@@ -31,3 +31,35 @@ body {
     text-wrap: balance;
   }
 }
+
+.product-overview-section {
+  @apply fixed top-14 bottom-14 overflow-y-scroll w-full flex flex-col items-center justify-between;
+
+  .product-overview-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 md:mx-10;
+  }
+}
+
+.product-detailed-section {
+  @apply w-full h-screen flex justify-center items-center;
+}
+
+.product-table-section {
+  @apply fixed w-full top-14 bottom-14 overflow-y-scroll flex justify-center;
+
+  .product-table {
+    @apply my-10 md:w-3/4 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400;
+
+    .product-table-thead {
+      @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+    }
+
+    .product-table-th {
+      @apply px-6 py-3;
+    }
+
+    .product-table-tr {
+      @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+    }
+  }
+}

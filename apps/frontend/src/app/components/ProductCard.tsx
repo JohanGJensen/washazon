@@ -2,6 +2,8 @@ import { OverviewProduct } from "../../types/products";
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from "./productCard.module.css";
+
 interface ProductCardProps {
   product: OverviewProduct;
 }
@@ -10,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div
       key={product.id}
-      className="w-[300px] overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md"
+      className={styles.card}
     >
       <Link href={`/product/${product.id}`}>
         <Image
@@ -31,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             </p>
           </div>
-          <button className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+          <button className={styles.cardButton}>
             Add to cart
           </button>
         </div>

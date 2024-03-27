@@ -73,13 +73,13 @@ export default function Table() {
   return (
     <PageWrapper>
       {products.length > 0 ? (
-        <section className="fixed w-full top-14 bottom-14 overflow-y-scroll flex justify-center">
-          <table className="my-10 md:w-3/4 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <section className="product-table-section">
+          <table className="product-table">
+            <thead className="product-table-thead">
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
-                    <th className={`px-6 py-3`} key={header.id}>
+                    <th className={`product-table-th`} key={header.id}>
                       <span
                         className={`w-full ${
                           header.column.getCanSort() ? "cursor-pointer" : ""
@@ -114,7 +114,7 @@ export default function Table() {
             <tbody>
               {table.getRowModel().rows.map((row) => (
                 <tr
-                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  className="product-table-tr"
                   key={row.id}
                 >
                   {row.getVisibleCells().map((cell) => (

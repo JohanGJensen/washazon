@@ -12,7 +12,7 @@ const Details: React.FC<DetailsPageProps> = async ({ params }) => {
 
   return (
     <PageWrapper>
-      <section className={"w-full h-screen flex justify-center items-center"}>
+      <section className={"product-detailed-section"}>
         {!product && <p>no product found</p>}
         {product && <DetailedOverview product={product} />}
       </section>
