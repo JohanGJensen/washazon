@@ -14,8 +14,6 @@ import {
   getFilteredRowModel,
 } from "@tanstack/react-table";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import PageWrapper from "../components/PageWrapper";
 import Link from "next/link";
 
@@ -74,11 +72,9 @@ export default function Table() {
 
   return (
     <PageWrapper>
-      <Header title={"washazon"} />
-
       {products.length > 0 ? (
-        <section className="my-10 h-full w-full md:w-3/4">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <section className="fixed w-full top-14 bottom-14 overflow-y-scroll flex justify-center">
+          <table className="my-10 md:w-3/4 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
@@ -104,7 +100,7 @@ export default function Table() {
                       {header.column.getCanFilter() && (
                         <input
                           className={"w-full"}
-                          placeholder={'search...'}
+                          placeholder={"search..."}
                           onChange={(e) =>
                             header.column.setFilterValue(e.target.value)
                           }
@@ -137,8 +133,6 @@ export default function Table() {
       ) : (
         <p>No products to show</p>
       )}
-
-      <Footer />
     </PageWrapper>
   );
 }
