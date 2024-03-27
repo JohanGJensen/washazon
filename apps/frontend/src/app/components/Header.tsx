@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Filter from "./Filter";
 
 interface HeaderProps {
   title: string;
@@ -11,6 +11,8 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       <Link href="/" className="text-white text-2xl">
         {title}
       </Link>
+
+      <Filter />
     </header>
   );
 };
