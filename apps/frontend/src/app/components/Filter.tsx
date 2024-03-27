@@ -43,9 +43,10 @@ const Filter: React.FC<FilterProps> = () => {
           <input
             ref={inputRef}
             className={
-              "bg-transparent outline-none focus:outline-[#88aedd] focus:outline-1 focus:rounded-sm placeholder:text-[#FFF] text-[#FFF]"
+              "bg-transparent outline-none focus:outline-[#88aedd] focus:outline-1 focus:rounded-sm placeholder:text-[#88aedd] text-[#FFF]"
             }
             placeholder={"search product..."}
+            // onBlur={() => setOpen(false)}
           />
           <HiX
             tabIndex={0}

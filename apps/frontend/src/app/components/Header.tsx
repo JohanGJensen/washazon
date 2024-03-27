@@ -3,16 +3,17 @@ import Filter from "./Filter";
 
 interface HeaderProps {
   title: string;
+  content?: React.ReactNode;
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const Header: React.FC<HeaderProps> = ({ title, content }) => {
   return (
-    <header className="flex items-center w-full h-14 bg-[#131921] p-5 fixed top-0">
+    <header className="flex items-center justify-between w-full h-14 bg-[#131921] p-5 fixed top-0">
       <Link href="/" className="text-white text-2xl">
         {title}
       </Link>
 
-      <Filter />
+      {content}
     </header>
   );
 };
