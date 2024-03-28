@@ -1,6 +1,4 @@
 import { getProductDetails } from "../../api/products/products";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import PageWrapper from "../../components/PageWrapper";
 import DetailedOverview from "../components/DetailedOverview";
 
@@ -14,12 +12,10 @@ const Details: React.FC<DetailsPageProps> = async ({ params }) => {
 
   return (
     <PageWrapper>
-      <Header title="washazon" />
-
-      {!product && <p>no product found</p>}
-      {product && <DetailedOverview product={product} />}
-
-      <Footer />
+      <section className={"product-detailed-section"}>
+        {!product && <p>no product found</p>}
+        {product && <DetailedOverview product={product} />}
+      </section>
     </PageWrapper>
   );
 };

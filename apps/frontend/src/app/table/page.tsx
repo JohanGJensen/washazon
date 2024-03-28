@@ -14,8 +14,6 @@ import {
   getFilteredRowModel,
 } from "@tanstack/react-table";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import PageWrapper from "../components/PageWrapper";
 import Link from "next/link";
 
@@ -74,16 +72,14 @@ export default function Table() {
 
   return (
     <PageWrapper>
-      <Header title={"washazon"} />
-
       {products.length > 0 ? (
-        <section className="my-10 h-full w-full md:w-3/4">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <section className="product-table-section">
+          <table className="product-table">
+            <thead className="product-table-thead">
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
-                    <th className={`px-6 py-3`} key={header.id}>
+                    <th className={`product-table-th`} key={header.id}>
                       <span
                         className={`w-full ${
                           header.column.getCanSort() ? "cursor-pointer" : ""
@@ -104,7 +100,7 @@ export default function Table() {
                       {header.column.getCanFilter() && (
                         <input
                           className={"w-full"}
-                          placeholder={'search...'}
+                          placeholder={"search..."}
                           onChange={(e) =>
                             header.column.setFilterValue(e.target.value)
                           }
@@ -118,7 +114,7 @@ export default function Table() {
             <tbody>
               {table.getRowModel().rows.map((row) => (
                 <tr
-                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  className="product-table-tr"
                   key={row.id}
                 >
                   {row.getVisibleCells().map((cell) => (
@@ -137,8 +133,6 @@ export default function Table() {
       ) : (
         <p>No products to show</p>
       )}
-
-      <Footer />
     </PageWrapper>
   );
 }

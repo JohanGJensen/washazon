@@ -1,7 +1,7 @@
 ## Todos:
 
 ### Frontend:
- - [ ] Refactor styling
+ - [x] Refactor styling
  - [ ] Split up components
 
  - [ ] Write basket component
