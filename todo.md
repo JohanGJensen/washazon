@@ -5,7 +5,7 @@
  - [ ] Split up components
 
  - [ ] Write basket component
- - [ ] Filter products
+ - [x] Filter products
  - [ ] Internationalization (i18n)?
 
 ### Backend:
