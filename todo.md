@@ -2,10 +2,9 @@
 
 ### Frontend:
  - [x] Refactor styling
- - [ ] Split up components
 
  - [ ] Write basket component
- - [ ] Filter products
+ - [x] Filter products
  - [ ] Internationalization (i18n)?
  - [ ] graphql? - possibly different project
 
