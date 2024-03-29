@@ -2,7 +2,6 @@
 
 ### Frontend:
  - [x] Refactor styling
- - [ ] Split up components
 
  - [ ] Write basket component
  - [x] Filter products
