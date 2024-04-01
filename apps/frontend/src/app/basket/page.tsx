@@ -6,41 +6,18 @@ import PageWrapper from "../components/PageWrapper";
 import Image from "next/image";
 import { BasketProduct } from "../../types/products";
 
-interface BasketPageProps {}
+const BasketPage: React.FC = () => {
+  const [basketItems, setBasketItems] = React.useState<BasketProduct[]>([]);
 
-const items: BasketProduct[] = [
-  {
-    id: 1,
-    name: "item 1",
-    image: "https://placeholder.com/100",
-    price: 250,
-    amount: 1,
-  },
-  {
-    id: 2,
-    name: "item 2",
-    image: "https://placeholder.com/100",
-    price: 299,
-    amount: 1,
-  },
-  {
-    id: 3,
-    name: "item 3",
-    image: "https://placeholder.com/100",
-    price: 50,
-    amount: 1,
-  },
-  {
-    id: 4,
-    name: "item 4",
-    image: "https://placeholder.com/100",
-    price: 300,
-    amount: 1,
-  },
-];
+  React.useEffect(() => {
+    const basketStorage: BasketProduct[] | null = JSON.parse(
+      localStorage.getItem("basket")!
+    );
 
-const BasketPage: React.FC<BasketPageProps> = () => {
-  const [basketItems, setBasketItems] = React.useState(items);
+    if (basketStorage) {
+      setBasketItems(basketStorage);
+    }
+  }, []);
 
   const onRemoveItem = (id: number) => {
     const index = basketItems.findIndex((item) => item.id === id);
@@ -48,6 +25,7 @@ const BasketPage: React.FC<BasketPageProps> = () => {
     newBasketItems.splice(index, 1);
 
     setBasketItems([...newBasketItems]);
+    localStorage.setItem("basket", JSON.stringify([...newBasketItems]));
   };
 
   return (
