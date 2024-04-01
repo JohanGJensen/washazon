@@ -7,12 +7,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, content }) => {
   return (
-    <header className="flex items-center justify-between w-full h-14 bg-[#131921] p-5 fixed top-0">
+    <header className="flex items-center justify-between flex-col sm:flex-row w-full h-auto sm:h-14 bg-[#131921] p-5 fixed top-0 z-10">
       <Link href="/" className="text-white text-2xl">
         {title}
       </Link>
 
-      {content}
+      {content && <nav className={"flex gap-2"}>{content}</nav>}
     </header>
   );
 };
