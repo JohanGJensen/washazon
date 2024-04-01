@@ -1,14 +1,12 @@
-import { useTranslations } from "next-intl";
 import { DetailedProduct } from "../../../../types/products";
 import Image from "next/image";
+import AddToCartButton from "../../components/AddToCartButton";
 
 interface DetailedOverviewProps {
   product: DetailedProduct;
 }
 
 const DetailedOverview: React.FC<DetailedOverviewProps> = ({ product }) => {
-  const t = useTranslations("layout.button");
-
   return (
     <section className="bg-white h-[100vh] md:h-auto w-full md:w-auto">
       <div className="container py-24 flex justify-center">
@@ -35,9 +33,9 @@ const DetailedOverview: React.FC<DetailedOverviewProps> = ({ product }) => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 {product.price},-
               </span>
-              <button className="ml-auto text-white bg-slate-900 hover:bg-gray-700 border-0 py-2 px-6 focus:outline-none rounded">
-                {t("addToCart")}
-              </button>
+              <span className={"ml-auto"}>
+                <AddToCartButton product={product} />
+              </span>
             </div>
           </div>
         </div>

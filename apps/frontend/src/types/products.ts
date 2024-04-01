@@ -10,3 +10,11 @@ export type OverviewProduct = {
 export type DetailedProduct = OverviewProduct & {
   description: string;
 };
+
+export type BasketProduct = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  amount: number;
+};

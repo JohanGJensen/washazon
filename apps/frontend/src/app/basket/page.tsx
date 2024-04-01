@@ -4,16 +4,9 @@ import React from "react";
 import { HiTrash } from "react-icons/hi";
 import PageWrapper from "../components/PageWrapper";
 import Image from "next/image";
+import { BasketProduct } from "../../types/products";
 
 interface BasketPageProps {}
-
-type BasketProduct = {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  amount: number;
-};
 
 const items: BasketProduct[] = [
   {
