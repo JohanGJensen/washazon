@@ -1,5 +1,6 @@
 import { DetailedProduct } from "../../../types/products";
 import Image from "next/image";
+import AddToCartButton from "../../components/AddToCartButton";
 
 interface DetailedOverviewProps {
   product: DetailedProduct;
@@ -32,9 +33,9 @@ const DetailedOverview: React.FC<DetailedOverviewProps> = ({ product }) => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 {product.price},-
               </span>
-              <button className="ml-auto text-white bg-slate-900 hover:bg-gray-700 border-0 py-2 px-6 focus:outline-none rounded">
-                Add to cart
-              </button>
+              <span className={"ml-auto"}>
+                <AddToCartButton product={product} />
+              </span>
             </div>
           </div>
         </div>

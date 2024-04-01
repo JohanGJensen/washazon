@@ -1,6 +1,7 @@
 import { OverviewProduct } from "../../types/products";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
 import styles from "./productCard.module.css";
 
@@ -33,9 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             </p>
           </div>
-          <button className={styles.cardButton}>
-            Add to cart
-          </button>
+          <AddToCartButton product={product} />
         </div>
       </Link>
     </div>
