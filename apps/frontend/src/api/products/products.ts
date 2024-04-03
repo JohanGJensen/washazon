@@ -1,5 +1,5 @@
-import env from "../../../constants/env";
-import type { OverviewProduct, DetailedProduct } from "../../../types/products";
+import env from "../../constants/env";
+import type { OverviewProduct, DetailedProduct } from "../../types/products";
 import {
   getMockedProductOverview,
   getMockedProductdetails,

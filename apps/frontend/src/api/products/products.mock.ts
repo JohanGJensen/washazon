@@ -1,4 +1,4 @@
-import { OverviewProduct, DetailedProduct } from "../../../types/products";
+import { OverviewProduct, DetailedProduct } from "../../types/products";
 
 export const mockedProductOverview: OverviewProduct[] = [
   {

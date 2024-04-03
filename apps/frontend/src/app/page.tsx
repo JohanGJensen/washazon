@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { getProductOverview } from "./api/products/products";
+import { getProductOverview } from "../api/products/products";
 
 import ProductCard from "./components/ProductCard";
 import PageWrapper from "./components/PageWrapper";

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { getProductOverview } from "../api/products/products";
+import { getProductOverview } from "../../api/products/products";
 import { OverviewProduct } from "../../types/products";
 
 import {
