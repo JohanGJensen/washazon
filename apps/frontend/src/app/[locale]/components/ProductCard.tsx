@@ -1,20 +1,21 @@
-import { OverviewProduct } from "../../types/products";
+import { OverviewProduct } from "../../../types/products";
 import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./productCard.module.css";
+import { useTranslations, useLocale } from "next-intl";
 
 interface ProductCardProps {
   product: OverviewProduct;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const t = useTranslations("layout.button");
+  const locale = useLocale();
+
   return (
-    <div
-      key={product.id}
-      className={styles.card}
-    >
-      <Link href={`/product/${product.id}`}>
+    <div key={product.id} className={styles.card}>
+      <Link href={`${locale}/product/${product.id}`}>
         <Image
           className="p-3 flex rounded-xl"
           src={product.image}
@@ -33,9 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             </p>
           </div>
-          <button className={styles.cardButton}>
-            Add to cart
-          </button>
+          <button className={styles.cardButton}>{t("addToCart")}</button>
         </div>
       </Link>
     </div>
