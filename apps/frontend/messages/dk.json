@@ -1,0 +1,25 @@
+{
+  "general": {
+    "company": {
+      "title": "washazon",
+      "trademark": "© 1996-2024, Washaton.com, Inc. eller affiliater"
+    }
+  },
+  "layout": {
+    "button": {
+      "addToCart": "Læg i kurven"
+    },
+    "filter": {
+      "search": {
+        "placeholder": "søg produkt..."
+      }
+    },
+    "table": {
+      "filter": {
+        "search": "søg..."
+      },
+      "noProductsFound": "ingen produkter fundet"
+    },
+    "productNotFound": "produktet blev ikke fundet"
+  }
+}

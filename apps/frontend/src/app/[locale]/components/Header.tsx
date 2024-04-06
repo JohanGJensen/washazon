@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Filter from "./Filter";
 
 interface HeaderProps {
   title: string;
