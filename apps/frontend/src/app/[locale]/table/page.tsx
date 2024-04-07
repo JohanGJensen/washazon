@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 
-import { getProductOverview } from "../api/products/products";
-import { OverviewProduct } from "../../types/products";
+import { getProductOverview } from "../../api/products/products";
+import { OverviewProduct } from "../../../types/products";
 
 import {
   useReactTable,
@@ -16,6 +16,7 @@ import {
 
 import PageWrapper from "../components/PageWrapper";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const columnHelper = createColumnHelper<OverviewProduct>();
 
@@ -52,6 +53,7 @@ const columns = [
 ];
 
 export default function Table() {
+  const t = useTranslations("layout.table");
   const [products, setProducts] = useState<OverviewProduct[]>([]);
   const table = useReactTable({
     columns,
@@ -100,7 +102,7 @@ export default function Table() {
                       {header.column.getCanFilter() && (
                         <input
                           className={"w-full"}
-                          placeholder={"search..."}
+                          placeholder={t("filter.search")}
                           onChange={(e) =>
                             header.column.setFilterValue(e.target.value)
                           }
@@ -131,7 +133,7 @@ export default function Table() {
           </table>
         </section>
       ) : (
-        <p>No products to show</p>
+        <p>{t("noProductsFound")}</p>
       )}
     </PageWrapper>
   );

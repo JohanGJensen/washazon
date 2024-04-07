@@ -1,4 +1,5 @@
-import "../globals.css";
+import { useTranslations } from "next-intl";
+import "../../globals.css";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -11,9 +12,11 @@ const PageWrapper: React.FC<PageWrapperProps> = ({
   children,
   headerContent,
 }) => {
+  const t = useTranslations("general.company");
+
   return (
     <main className="flex flex-col items-center justify-between h-screen w-full">
-      <Header title={"washazon"} content={headerContent ?? null} />
+      <Header title={t("title")} content={headerContent ?? null} />
       {children}
       <Footer />
     </main>

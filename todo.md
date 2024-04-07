@@ -5,7 +5,7 @@
 
  - [x] Write basket component
  - [x] Filter products
- - [ ] Internationalization (i18n)?
+ - [x] Internationalization (i18n)?
  - [ ] graphql? - possibly different project
 
 ### Backend:

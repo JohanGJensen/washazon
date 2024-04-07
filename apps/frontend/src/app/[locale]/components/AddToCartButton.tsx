@@ -1,6 +1,6 @@
 "use client";
 
-import { BasketProduct, OverviewProduct } from "../../types/products";
+import { BasketProduct, OverviewProduct } from "../../../types/products";
 import styles from "./addToCartButton.module.css";
 
 interface AddToCartButtonProps {

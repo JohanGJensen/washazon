@@ -3,17 +3,19 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 import { HiSearch, HiX } from "react-icons/hi";
+import { useTranslations  } from "next-intl";
 
 interface FilterProps {
   query: string | undefined;
 }
 
 const Filter: React.FC<FilterProps> = ({ query }) => {
+  const t = useTranslations("layout.filter.search");
   const inputRef = React.useRef<HTMLInputElement>(null);
   const [open, setOpen] = React.useState(false);
   const { replace } = useRouter();
   const searchParams = useSearchParams();
-
+  
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const params = new URLSearchParams(searchParams);
     const value = e.target.value;
@@ -67,7 +69,7 @@ const Filter: React.FC<FilterProps> = ({ query }) => {
             className={
               "bg-transparent outline-none focus:outline-[#88aedd] focus:outline-1 focus:rounded-sm placeholder:text-[#88aedd] text-[#FFF]"
             }
-            placeholder={"search product..."}
+            placeholder={t('placeholder')}
             onChange={handleSearch}
             // onBlur={() => setOpen(false)}
           />

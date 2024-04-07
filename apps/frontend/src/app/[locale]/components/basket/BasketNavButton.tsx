@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { HiShoppingCart } from "react-icons/hi";
-import { BasketProduct } from "../../../types/products";
+import { BasketProduct } from "../../../../types/products";
 
 interface BasketNavButtonProps {}
 
