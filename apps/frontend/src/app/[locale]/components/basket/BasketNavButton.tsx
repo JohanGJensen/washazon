@@ -3,11 +3,13 @@
 import Link from "next/link";
 import React from "react";
 import { HiShoppingCart } from "react-icons/hi";
-import { BasketProduct } from "../../../types/products";
+import { BasketProduct } from "../../../../types/products";
+import { useLocale } from "next-intl";
 
 interface BasketNavButtonProps {}
 
 const BasketNavButton: React.FC<BasketNavButtonProps> = () => {
+  const locale = useLocale();
   const [count, setCount] = React.useState<number>(0);
   
   React.useEffect(() => {    
@@ -30,7 +32,7 @@ const BasketNavButton: React.FC<BasketNavButtonProps> = () => {
   }, []);
 
   return (
-    <Link href={"/basket"} className={"relative bg-[#243c5a] rounded-md p-1 flex"}>
+    <Link href={`/${locale}/basket`} className={"relative bg-[#243c5a] rounded-md p-1 flex"}>
       <HiShoppingCart
         type={"button"}
         className={"cursor-pointer"}

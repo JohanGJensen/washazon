@@ -1,4 +1,4 @@
-import { DetailedProduct } from "../../../types/products";
+import { DetailedProduct } from "../../../../types/products";
 import Image from "next/image";
 import AddToCartButton from "../../components/AddToCartButton";
 

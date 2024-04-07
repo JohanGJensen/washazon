@@ -1,0 +1,25 @@
+{
+  "general": {
+    "company": {
+      "title": "washazon",
+      "trademark": "© 1996-2024, Washaton.com, Inc. or its affiliates"
+    }
+  },
+  "layout": {
+    "button": {
+      "addToCart": "Add to Cart"
+    },
+    "filter": {
+      "search": {
+        "placeholder": "search product..."
+      }
+    },
+    "table": {
+      "filter": {
+        "search": "search..."
+      },
+      "noProductsFound": "no products found"
+    },
+    "productNotFound": "product not found"
+  }
+}
