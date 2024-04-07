@@ -7,6 +7,7 @@ import { getProductOverview } from "../api/products/products";
 import ProductCard from "./components/ProductCard";
 import PageWrapper from "./components/PageWrapper";
 import Filter from "./components/Filter";
+import BasketNavButton from "./components/basket/BasketNavButton";
 
 export default async function Home({
   searchParams,
@@ -17,7 +18,14 @@ export default async function Home({
   const searchQuery = searchParams.search?.toString().toLowerCase();
 
   return (
-    <PageWrapper headerContent={<Filter query={searchQuery} />}>
+    <PageWrapper
+      headerContent={
+        <>
+          <Filter query={searchQuery} />
+          <BasketNavButton />
+        </>
+      }
+    >
       <section className="product-overview-section">
         <div className={"product-overview-grid"}>
           {products &&

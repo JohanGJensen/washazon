@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --navigation-primary-background: #131921;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -40,7 +41,8 @@ body {
   }
 }
 
-.product-detailed-section {
+.product-detailed-section,
+.basket-overview-section {
   @apply w-full h-screen flex justify-center items-center;
 }
 

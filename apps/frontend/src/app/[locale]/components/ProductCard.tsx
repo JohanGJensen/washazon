@@ -1,16 +1,16 @@
 import { OverviewProduct } from "../../../types/products";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
 import styles from "./productCard.module.css";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 
 interface ProductCardProps {
   product: OverviewProduct;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const t = useTranslations("layout.button");
   const locale = useLocale();
 
   return (
@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             </p>
           </div>
-          <button className={styles.cardButton}>{t("addToCart")}</button>
+          <AddToCartButton product={product} />
         </div>
       </Link>
     </div>
