@@ -1,10 +1,10 @@
 import { OverviewProduct } from "../../../types/products";
 import Image from "next/image";
 import Link from "next/link";
-import AddToCartButton from "./AddToCartButton";
 
 import styles from "./productCard.module.css";
 import { useLocale } from "next-intl";
+import AddToCartButton from "../components/AddToCartButton";
 
 interface ProductCardProps {
   product: OverviewProduct;
