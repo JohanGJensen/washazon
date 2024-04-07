@@ -4,7 +4,7 @@ import React from "react";
 import { HiTrash } from "react-icons/hi";
 import PageWrapper from "../components/PageWrapper";
 import Image from "next/image";
-import { BasketProduct } from "../../types/products";
+import { BasketProduct } from "../../../types/products";
 
 const BasketPage: React.FC = () => {
   const [basketItems, setBasketItems] = React.useState<BasketProduct[]>([]);

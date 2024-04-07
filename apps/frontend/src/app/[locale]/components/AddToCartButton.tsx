@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { BasketProduct, OverviewProduct } from "../../../types/products";
 import styles from "./addToCartButton.module.css";
 
@@ -8,6 +9,8 @@ interface AddToCartButtonProps {
 }
 
 const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product }) => {
+  const t = useTranslations("layout.button");
+
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
@@ -63,7 +66,7 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product }) => {
 
   return (
     <button onClick={handleOnClick} className={styles.cardButton}>
-      Add to cart
+      {t("addToCart")}
     </button>
   );
 };
