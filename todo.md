@@ -10,6 +10,6 @@
  - [ ] better fetch error handling
 
 ### Backend:
-- [ ] Add mysql
-- [ ] Add docker compose?
+- [x] Add mysql - postgres
+- [x] Add docker compose?
 - [ ] Mock interceptors?
