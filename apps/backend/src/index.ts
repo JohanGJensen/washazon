@@ -26,11 +26,5 @@ app.use(
 app.use(express.json());
 app.use("/api", productRoutes);
 app.listen(port, () => {
-  // pool.connect()
-  // .then(() => console.log('database connected!'))
-  // .catch((err) => {
-  //   console.error('Error connecting to PostgreSQL database', err);
-  // });
-
   console.log(`application is listening on port:${port}`);
 });
