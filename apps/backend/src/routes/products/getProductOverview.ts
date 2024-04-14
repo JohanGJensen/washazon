@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { StatusEnum } from "../../types/status";
 import { ProductType, ProductOverview } from "../../schemas/product";
 import { pool } from "../../database";
+import { queryError } from "../../utils/responses/queryError";
 
 // METHOD=GET
 const getProductOverview = async (req: Request, res: Response) => {
@@ -10,12 +11,7 @@ const getProductOverview = async (req: Request, res: Response) => {
   pool.query(
     "SELECT id, title, brand, capacity, price, image FROM products",
     (err, result) => {
-      if (err) {
-        console.error("Error executing query", err);
-        res
-          .status(BAD_REQUEST)
-          .json({ message: "Error getting data from database!" });
-      }
+      if (err) queryError(res, err);
 
       const data: ProductType[] = result.rows;
 

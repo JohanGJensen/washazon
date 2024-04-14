@@ -3,6 +3,7 @@ import { StatusEnum } from "../../types/status";
 import { ProductDetailedType, ProductDetailed } from "../../schemas/product";
 
 import { pool } from "../../database";
+import { queryError } from "../../utils/responses/queryError";
 
 // METHOD=GET
 const getProductDetails = async (req: Request, res: Response) => {
@@ -10,12 +11,7 @@ const getProductDetails = async (req: Request, res: Response) => {
   const { OK, BAD_REQUEST } = StatusEnum;
 
   pool.query("SELECT * FROM products WHERE id = $1", [id], (err, result) => {
-    if (err) {
-      console.error("Error executing query", err);
-      res
-        .status(BAD_REQUEST)
-        .json({ message: "Error getting data from database!" });
-    }
+    if (err) queryError(res, err);
 
     const data: ProductDetailedType[] = result.rows;
     const product: ProductDetailedType = data[0];
