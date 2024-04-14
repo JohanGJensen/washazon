@@ -1,6 +1,6 @@
 export type OverviewProduct = {
   id: number;
-  name: string;
+  title: string;
   brand: string;
   capacity: string;
   price: number;
@@ -13,7 +13,7 @@ export type DetailedProduct = OverviewProduct & {
 
 export type BasketProduct = {
   id: number;
-  name: string;
+  title: string;
   image: string;
   price: number;
   amount: number;

@@ -7,6 +7,7 @@
  - [x] Filter products
  - [x] Internationalization (i18n)?
  - [ ] graphql? - possibly different project
+ - [ ] better fetch error handling
 
 ### Backend:
 - [ ] Add mysql

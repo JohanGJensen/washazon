@@ -7,6 +7,9 @@
 	},
 	"scripts": {
 		"build": "turbo type-check build",
-		"dev": "turbo dev"
+		"dev": "turbo dev",
+		"dev:database": "docker compose up -d && turbo dev",
+		"add:backend": "pnpm add $PACKAGE --filter ./apps/backend",
+		"add:frontend": "pnpm add $PACKAGE --filter ./apps/frontend"
 	}
 }

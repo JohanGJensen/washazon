@@ -40,13 +40,13 @@ const BasketPage: React.FC = () => {
               <div className={"flex justify-start"}>
                 <Image
                   src={item.image}
-                  alt={item.name}
+                  alt={item.title}
                   width={100}
                   height={100}
                 />
                 <div className="lg:w-1/2 w-full pl-3">
                   <h1 className="text-gray-900 text-2xl font-medium">
-                    {item.name}
+                    {item.title}
                   </h1>
 
                   <div className="flex flex-wrap">
