@@ -14,3 +14,4 @@
 - [x] Add docker compose?
 - [ ] Mock interceptors?
 - [ ] Migrations
+- [ ] FS - file system (images)
