@@ -1,16 +1,18 @@
 import { Request, Response } from "express";
 import { StatusEnum } from "../../types/status";
 import { ProductDetailedType, ProductDetailed } from "../../schemas/product";
-
-import { pool } from "../../database";
+import { DatabaseTableEnum, pool } from "../../database";
 import { queryError } from "../../utils/responses/queryError";
 
 // METHOD=GET
 const getProductDetails = async (req: Request, res: Response) => {
   const id = parseInt(req.params.productid);
   const { OK, BAD_REQUEST } = StatusEnum;
+  const { PRODUCTS } = DatabaseTableEnum;
+  const query = `SELECT * FROM ${PRODUCTS} WHERE id = $1`;
+  const values = [id];
 
-  pool.query("SELECT * FROM products WHERE id = $1", [id], (err, result) => {
+  pool.query(query, values, (err, result) => {
     if (err) queryError(res, err);
 
     const data: ProductDetailedType[] = result.rows;

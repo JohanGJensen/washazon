@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import { config } from "dotenv";
-import { pool } from "./database";
 
 // routes
 import productRoutes from "./routes/products";
