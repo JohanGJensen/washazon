@@ -12,8 +12,6 @@ export const pool = new Pool({
   database: process.env.POSTGRES_DATABASE_NAME,
 });
 
-console.log(process.env.POSTGRES_USER)
-
 export enum DatabaseTableEnum {
   PRODUCTS = "products",
 };
