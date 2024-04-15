@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const Product = z.object({
   id: z.number(),
-  name: z.string(),
+  title: z.string(),
   brand: z.string(),
   capacity: z.string(),
   price: z.number(),

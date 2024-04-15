@@ -3,7 +3,7 @@ import { OverviewProduct, DetailedProduct } from "../../../types/products";
 export const mockedProductOverview: OverviewProduct[] = [
   {
     id: 1,
-    name: "SuperSuds 5000",
+    title: "SuperSuds 5000",
     brand: "LaundryMaster",
     capacity: "10 kg",
     price: 499.99,
@@ -11,7 +11,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 2,
-    name: "TurboWash Pro",
+    title: "TurboWash Pro",
     brand: "SparkleClean",
     capacity: "8 kg",
     price: 399.99,
@@ -19,7 +19,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 3,
-    name: "EcoFresh XL",
+    title: "EcoFresh XL",
     brand: "GreenCycle",
     capacity: "12 kg",
     price: 599.99,
@@ -27,7 +27,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 4,
-    name: "GentleGlide Plus",
+    title: "GentleGlide Plus",
     brand: "SoftCare",
     capacity: "7 kg",
     price: 349.99,
@@ -35,7 +35,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 5,
-    name: "QuickWash Elite",
+    title: "QuickWash Elite",
     brand: "RapidRinse",
     capacity: "9 kg",
     price: 449.99,
@@ -43,7 +43,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 6,
-    name: "SilkSpin Supreme",
+    title: "SilkSpin Supreme",
     brand: "VelvetWash",
     capacity: "11 kg",
     price: 529.99,
@@ -51,7 +51,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 7,
-    name: "FreshAir Express",
+    title: "FreshAir Express",
     brand: "PureBreeze",
     capacity: "8.5 kg",
     price: 459.99,
@@ -59,7 +59,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 8,
-    name: "WhisperWash Deluxe",
+    title: "WhisperWash Deluxe",
     brand: "SereneClean",
     capacity: "10.5 kg",
     price: 579.99,
@@ -67,7 +67,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 9,
-    name: "UltraRinse Max",
+    title: "UltraRinse Max",
     brand: "ShineBright",
     capacity: "9.5 kg",
     price: 499.99,
@@ -75,7 +75,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 10,
-    name: "ZenWash Harmony",
+    title: "ZenWash Harmony",
     brand: "TranquilWaves",
     capacity: "8 kg",
     price: 389.99,
@@ -83,7 +83,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 11,
-    name: "SwiftSpin Express",
+    title: "SwiftSpin Express",
     brand: "QuickClean",
     capacity: "12.5 kg",
     price: 649.99,
@@ -91,7 +91,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 12,
-    name: "SilentWash Pro",
+    title: "SilentWash Pro",
     brand: "HushCycle",
     capacity: "10 kg",
     price: 539.99,
@@ -99,7 +99,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 13,
-    name: "PowerRinse Boost",
+    title: "PowerRinse Boost",
     brand: "MightyWash",
     capacity: "11.5 kg",
     price: 589.99,
@@ -107,7 +107,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 14,
-    name: "FreshBreeze Xstream",
+    title: "FreshBreeze Xstream",
     brand: "AirRinse",
     capacity: "9 kg",
     price: 469.99,
@@ -115,7 +115,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 15,
-    name: "EcoSwift EcoClean",
+    title: "EcoSwift EcoClean",
     brand: "GreenSwift",
     capacity: "8 kg",
     price: 419.99,
@@ -123,7 +123,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 16,
-    name: "PristineWash Pro",
+    title: "PristineWash Pro",
     brand: "CrystalClean",
     capacity: "10 kg",
     price: 509.99,
@@ -131,7 +131,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 17,
-    name: "HydroWash Elite",
+    title: "HydroWash Elite",
     brand: "AquaRinse",
     capacity: "8.5 kg",
     price: 439.99,
@@ -139,7 +139,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 18,
-    name: "SilverGlide Master",
+    title: "SilverGlide Master",
     brand: "GentleShine",
     capacity: "12 kg",
     price: 619.99,
@@ -147,7 +147,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 19,
-    name: "ZenRinse Harmony",
+    title: "ZenRinse Harmony",
     brand: "CalmWaves",
     capacity: "9 kg",
     price: 479.99,
@@ -155,7 +155,7 @@ export const mockedProductOverview: OverviewProduct[] = [
   },
   {
     id: 20,
-    name: "SwiftRinse Express",
+    title: "SwiftRinse Express",
     brand: "QuickClean",
     capacity: "11 kg",
     price: 559.99,
@@ -166,7 +166,7 @@ export const mockedProductOverview: OverviewProduct[] = [
 export const mockedProuctDetailedOverview: DetailedProduct[] = [
   {
     id: 1,
-    name: "SuperSuds 5000",
+    title: "SuperSuds 5000",
     description:
       "The SuperSuds 5000 is a laundry powerhouse. With a whopping 10 kg capacity, it'll handle your laundry needs with ease. Laundry day just got a whole lot more exciting!",
     brand: "LaundryMaster",
@@ -176,7 +176,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 2,
-    name: "TurboWash Pro",
+    title: "TurboWash Pro",
     description:
       "The TurboWash Pro is designed for those who crave speed and efficiency. With an 8 kg capacity, it'll breeze through your laundry in no time, leaving you more moments for yourself.",
     brand: "SparkleClean",
@@ -186,7 +186,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 3,
-    name: "EcoFresh XL",
+    title: "EcoFresh XL",
     description:
       "Introducing the EcoFresh XL, your eco-friendly laundry companion. With a generous 12 kg capacity, it combines sustainability with powerful performance for a guilt-free laundry experience.",
     brand: "GreenCycle",
@@ -196,7 +196,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 4,
-    name: "GentleGlide Plus",
+    title: "GentleGlide Plus",
     description:
       "Experience laundry like never before with the GentleGlide Plus. This washing marvel with a 7 kg capacity ensures a gentle touch on your clothes, leaving them refreshed and cared for.",
     brand: "SoftCare",
@@ -206,7 +206,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 5,
-    name: "QuickWash Elite",
+    title: "QuickWash Elite",
     description:
       "Get ready for express laundry with the QuickWash Elite. Its 9 kg capacity and swift performance make it the go-to choice for those who want their laundry done in a flash.",
     brand: "RapidRinse",
@@ -216,7 +216,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 6,
-    name: "SilkSpin Supreme",
+    title: "SilkSpin Supreme",
     description:
       "Indulge in the luxury of the SilkSpin Supreme. With an 11 kg capacity, this washing machine ensures your fabrics are treated with the utmost care, leaving them soft and silky.",
     brand: "VelvetWash",
@@ -226,7 +226,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 7,
-    name: "FreshAir Express",
+    title: "FreshAir Express",
     description:
       "Breathe in the freshness with the FreshAir Express. Featuring an 8.5 kg capacity, it infuses a touch of crisp air into your laundry, leaving your clothes smelling rejuvenated.",
     brand: "PureBreeze",
@@ -236,7 +236,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 8,
-    name: "WhisperWash Deluxe",
+    title: "WhisperWash Deluxe",
     description:
       "Enter a world of tranquility with the WhisperWash Deluxe. Its 10.5 kg capacity and silent operation ensure a peaceful laundry experience, making it a true laundry sanctuary.",
     brand: "SereneClean",
@@ -246,7 +246,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 9,
-    name: "UltraRinse Max",
+    title: "UltraRinse Max",
     description:
       "Achieve maximum cleanliness with the UltraRinse Max. Boasting a 9.5 kg capacity, this washing marvel ensures your laundry is thoroughly rinsed for a pristine finish.",
     brand: "ShineBright",
@@ -256,7 +256,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 10,
-    name: "ZenWash Harmony",
+    title: "ZenWash Harmony",
     description:
       "Experience the ZenWash Harmony for a calming laundry ritual. With an 8 kg capacity, it brings a sense of harmony to your laundry routine, making it a truly zen experience.",
     brand: "TranquilWaves",
@@ -266,7 +266,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 11,
-    name: "SwiftSpin Express",
+    title: "SwiftSpin Express",
     description:
       "SwiftSpin Express - for those who value speed without compromising efficiency. With a massive 12.5 kg capacity, it's the choice for those who want their laundry done in a flash.",
     brand: "QuickClean",
@@ -276,7 +276,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 12,
-    name: "SilentWash Pro",
+    title: "SilentWash Pro",
     description:
       "SilentWash Pro ensures a silent yet powerful laundry experience. With a 10 kg capacity, it silently takes care of your laundry, leaving you with nothing but the sound of cleanliness.",
     brand: "HushCycle",
@@ -286,7 +286,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 13,
-    name: "PowerRinse Boost",
+    title: "PowerRinse Boost",
     description:
       "PowerRinse Boost - where power meets precision. With an 11.5 kg capacity, this machine ensures a thorough rinse, giving your clothes the boost they need for a fresh finish.",
     brand: "MightyWash",
@@ -296,7 +296,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 14,
-    name: "FreshBreeze Xstream",
+    title: "FreshBreeze Xstream",
     description:
       "FreshBreeze Xstream - where the breeze meets freshness. Featuring a 9 kg capacity, it brings a breath of fresh air to your laundry, leaving your clothes revitalized.",
     brand: "AirRinse",
@@ -306,7 +306,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 15,
-    name: "EcoSwift EcoClean",
+    title: "EcoSwift EcoClean",
     description:
       "EcoSwift EcoClean - eco-friendly and efficient. With an 8 kg capacity, it brings eco-consciousness to your laundry routine, making it a clean and green experience.",
     brand: "GreenSwift",
@@ -316,7 +316,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 16,
-    name: "PristineWash Pro",
+    title: "PristineWash Pro",
     description:
       "PristineWash Pro - for a laundry experience that's nothing short of pristine. With a 10 kg capacity, it ensures your clothes receive the royal treatment they deserve.",
     brand: "CrystalClean",
@@ -326,7 +326,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 17,
-    name: "HydroWash Elite",
+    title: "HydroWash Elite",
     description:
       "HydroWash Elite - the elite choice for a hydro-powered wash. Featuring an 8.5 kg capacity, it combines power and efficiency for a wash that leaves your clothes refreshed.",
     brand: "AquaRinse",
@@ -336,7 +336,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 18,
-    name: "SilverGlide Master",
+    title: "SilverGlide Master",
     description:
       "SilverGlide Master - where silver meets masterful cleaning. With a 12 kg capacity, it ensures your clothes glide through the wash with elegance and shine.",
     brand: "GentleShine",
@@ -346,7 +346,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 19,
-    name: "ZenRinse Harmony",
+    title: "ZenRinse Harmony",
     description:
       "ZenRinse Harmony - a harmony of technology and tranquility. With a 9 kg capacity, it brings a sense of peace to your laundry routine, making it a truly zen experience.",
     brand: "CalmWaves",
@@ -356,7 +356,7 @@ export const mockedProuctDetailedOverview: DetailedProduct[] = [
   },
   {
     id: 20,
-    name: "SwiftRinse Express",
+    title: "SwiftRinse Express",
     description:
       "SwiftRinse Express - the express lane to cleanliness. With an 11 kg capacity, it ensures your laundry is done swiftly without compromising on the rinse quality.",
     brand: "QuickClean",

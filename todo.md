@@ -7,8 +7,11 @@
  - [x] Filter products
  - [x] Internationalization (i18n)?
  - [ ] graphql? - possibly different project
+ - [ ] better fetch error handling
 
 ### Backend:
-- [ ] Add mysql
-- [ ] Add docker compose?
+- [x] Add mysql - postgres
+- [x] Add docker compose?
 - [ ] Mock interceptors?
+- [ ] Migrations
+- [ ] FS - file system (images)

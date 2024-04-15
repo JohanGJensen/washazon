@@ -21,8 +21,8 @@ import { useTranslations } from "next-intl";
 const columnHelper = createColumnHelper<OverviewProduct>();
 
 const columns = [
-  columnHelper.accessor((row) => row.name, {
-    id: "name",
+  columnHelper.accessor((row) => row.title, {
+    id: "title",
     header: () => <span>Product</span>,
     cell: (info) => (
       <Link

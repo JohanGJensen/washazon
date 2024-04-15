@@ -13,7 +13,7 @@ const DetailedOverview: React.FC<DetailedOverviewProps> = ({ product }) => {
         <div className="w-4/5 flex flex-wrap justify-around">
           <Image
             src={product.image}
-            alt={product.name}
+            alt={product.title}
             width={300}
             height={300}
           />
@@ -22,7 +22,7 @@ const DetailedOverview: React.FC<DetailedOverviewProps> = ({ product }) => {
               {product.brand}
             </h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-              {product.name}
+              {product.title}
             </h1>
 
             <div className="mt-5 mb-10">

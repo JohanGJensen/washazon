@@ -19,13 +19,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <Image
           className="p-3 flex rounded-xl"
           src={product.image}
-          alt={product.name}
+          alt={product.title}
           width={300}
           height={300}
         />
         <div className="mt-4 px-5 pb-5">
           <h4 className="text-xl tracking-tight text-slate-900">
-            {product.name}
+            {product.title}
           </h4>
           <div className="mt-2 mb-5 flex items-center justify-between">
             <p>

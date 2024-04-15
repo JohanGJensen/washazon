@@ -33,7 +33,7 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product }) => {
         if (storedItemIndex === -1) {
           basketStorage.push({
             id: product.id,
-            name: product.name,
+            title: product.title,
             image: product.image,
             price: product.price,
             amount: 1,
@@ -50,7 +50,7 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product }) => {
         const newBasketStorage: BasketProduct[] = [
           {
             id: product.id,
-            name: product.name,
+            title: product.title,
             image: product.image,
             price: product.price,
             amount: 1,

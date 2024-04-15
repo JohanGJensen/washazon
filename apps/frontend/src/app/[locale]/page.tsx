@@ -32,7 +32,7 @@ export default async function Home({
             products.map((product) => {
               if (
                 searchQuery &&
-                !product.name.toLowerCase().includes(searchQuery)
+                !product.title.toLowerCase().includes(searchQuery)
               ) {
                 return null;
               }
