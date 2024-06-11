@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "A commerce site",
 	"devDependencies": {
+		"ts-node": "^10.9.2",
 		"turbo": "^1.12.3"
 	},
 	"scripts": {
